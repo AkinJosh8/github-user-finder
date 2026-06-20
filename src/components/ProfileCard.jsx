@@ -22,7 +22,7 @@ function ProfileCard({ userData }) {
       </p>
 
       <p>{userData.location}</p>
-      <p>👥 Followers: {userData.followers}</p>
+      <p> Followers: {userData.followers}</p>
 
         <p>Following: {userData.following} </p>
 
