@@ -4,7 +4,6 @@ function SearchBar({ username, setUsername, fetchUser, history }) {
   return (
     <div className="search-box">
       <FaSearch className="search-icon" />
-
       <input type="text" placeholder="Enter Github username" value={username}
         onChange={(e) => setUsername(e.target.value)}
         onKeyDown={(e) => {
@@ -13,15 +12,11 @@ function SearchBar({ username, setUsername, fetchUser, history }) {
           }
         }}
       />
-
       <button onClick={fetchUser}> Search </button>
-
         {/* Display search history if there are any */}
       {history.length > 0 && (
         <div className="history-box">
-
-            <h3>Recent Searches</h3>
-
+          <h3>Recent Searches</h3>
         {/* Map through the history array and create a button for each item */}
         {history.map((item,index) => (
             <button
@@ -31,12 +26,9 @@ function SearchBar({ username, setUsername, fetchUser, history }) {
             },0)
         }} > {item} </button>
         ))}
-
-        </div>
-        )}
-
+      </div>
+      )}
     </div>
-    
   )
 }
 
